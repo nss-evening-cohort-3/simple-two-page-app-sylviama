@@ -10,7 +10,7 @@
 
 </head>
 <body ng-app>
-    <h1>Hello Angular 1+2= {{(1+2)}}</h1>
+    <h1>Hello Angular 1+2= {{1+2}}</h1>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -43,8 +43,8 @@
     @Scripts.Render("~/bundles/bootstrap")
     @*@Scripts.Render("~/bundles/angular")*@
     @section Scripts{
-        <script src="~/Scripts/angular.min.js"></script>
-        <script src="~/Scripts/app.js"></script>
+        @Scripts.Render("~/Scripts/angular.min.js")
+        @Scripts.Render("~/Scripts/app.js")
         }
     @RenderSection("scripts", required: false)
 </body>
